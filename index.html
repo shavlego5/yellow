@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="img">
+            <img src="5.png" alt="">
+        </div>
+        
+        <script src="vanila.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelector(".img"), {
+                max: 25,
+                speed: 400,
+                glare: true,
+                "max-glare": 1
+            });
+
+            let img = document.querySelector(".img img");
+
+            window.addEventListener("load", ()=> {
+                img.style.marginLeft = -img.offsetWidth/2 + "px"
+            })
+            
+        </script>
+    </body>
+</html>
